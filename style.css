@@ -1,0 +1,45 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0.5rem 1rem;
+    color: #555555;
+}
+
+h1 {
+    font-weight: bolder;
+}
+
+h1 span {
+   font-size: 1.85rem;
+}
+
+hr {
+    border: 1px solid rgba(85, 85, 85, 0.2);
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li:first-child {
+    padding: 0.25rem 0 0.125rem 0;
+}
+
+ul li {
+    padding: 0.125rem 0 0.25rem 0;
+    transition: all 0.2s linear;
+}
+
+ul li:hover {
+    background-color: rgba(85, 85, 85, 0.05);
+}
+
+ul li h3 {
+    font-size: 1.4rem;
+}
+
+a {
+    color: inherit;
+}
