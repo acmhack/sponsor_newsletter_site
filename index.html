@@ -8,17 +8,39 @@
     </head>
 
     <body>
-        <h1><span>&#129309;</span> Sponsor Newsletters</h1>
+        <div class="passwordBox">
+            <h2>Enter Password for Login:</h2>
+            <form>
+                <input type="password" name="password" />
+                <button type="submit">OK</button>
+            </form>
+        </div>
 
-        <hr />
+        <h1 class="passwordProtected"><span>&#129309;</span> Sponsor Newsletters</h1>
 
-        <ul>
+        <hr class="passwordProtected" />
+
+        <ul class="passwordProtected">
             <li>
-                <h3><span>&#127810;</span> <a href="#">September Newsletter</a></h3>
+                <h3><span>&#127810;</span> <a href="#" target="_blank">September Newsletter</a></h3>
             </li>
             <li>
-                <h3><span>❄️</span> <a href="#">December Newsletter</a></h3>
+                <h3><span>❄️</span> <a href="#" target="_blank">December Newsletter</a></h3>
             </li>
         </ul>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <script>
+            $("form").on('submit', function (e) {
+                if( $("input").val() === "pickhacks_sponsor_2020" )
+                {
+                    $(".passwordProtected").css("display","block");
+                    $(".passwordBox").css("display","none");
+                }
+
+                //stop form submission
+                e.preventDefault();
+            });
+        </script>
     </body>
 </html>
