@@ -31,12 +31,20 @@
 
         <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
         <script>
+            function sha512(str) {
+                return crypto.subtle.digest("SHA-512", new TextEncoder("utf-8").encode(str)).then(buf => {
+                    return Array.prototype.map.call(new Uint8Array(buf), x=>(('00'+x.toString(16)).slice(-2))).join('');
+                });
+            }
+
             $("form").on('submit', function (e) {
-                if( $("input").val() === "pickhacks_sponsor_2020" )
-                {
-                    $(".passwordProtected").css("display","block");
-                    $(".passwordBox").css("display","none");
-                }
+                sha512($("input").val()).then( function(value) { 
+                    if( value === "f4a17ea509e4336cfccb796db6e13d21a37e22fa70544096c56a457562facb559cb42acfacae915b98164146bd6d91b075f54b4c0bac3cfa645b22e94828e98c" )
+                    {
+                        $(".passwordProtected").css("display","block");
+                        $(".passwordBox").css("display","none");
+                    }
+                 });
 
                 //stop form submission
                 e.preventDefault();
