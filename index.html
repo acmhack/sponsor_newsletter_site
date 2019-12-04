@@ -31,12 +31,6 @@
 
         <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
         <script>
-            function sha512(str) {
-                return crypto.subtle.digest("SHA-512", new TextEncoder("utf-8").encode(str)).then(buf => {
-                    return Array.prototype.map.call(new Uint8Array(buf), x=>(('00'+x.toString(16)).slice(-2))).join('');
-                });
-            }
-
             $("form").on('submit', function (e) {
                 if( SHA512($("input").val()) === "1d37c58b590d1f560393ce80a834d58f938a2e327238678dd8a67dda4632241a59385c4a7a4fcadc14507477ad88b9f4bc43a13e7e86dca77950d7c88e8565c0" )
                 {
