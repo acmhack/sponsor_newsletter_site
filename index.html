@@ -3,53 +3,163 @@
     <head>
         <title>PickHacks - Sponsor Newsletters</title>
 
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- Fonts -->
+        <link href="https://use.typekit.net/hio1tei.css" rel="stylesheet" >
+
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/55a678c497.js" crossorigin="anonymous"></script>
+
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:800&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
 
     <body>
-        <div class="passwordBox">
+        <nav class="navbar fixed-top navbar-dark navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler mr-auto my-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="mlh" id="mlh-trust-badge"  href="https://mlh.io/seasons/na-2020/events" target="_blank">
+                    <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2020/mlh-trust-badge-2020-white.svg" alt="Major League Hacking 2019 Hackathon Season" style="width: 86px"/>
+                </a>
+                <a class="navbar-brand page-switch" href="#mainpage">
+                    <img src="images/pickhacks-logo.png" alt="" height="38px" width="38px"/>
+                </a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav main-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link page-switch" href="#todopage">ToDo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-switch" href="#faqpage">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-switch" href="#newsletterspage">Newsletters</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-switch" href="#resumespage">Resumes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-switch" href="#sponsorspage">Sponsors</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- <div class="passwordBox">
             <h2>Enter Password for Login:</h2>
             <form>
                 <input type="password" name="password" />
                 <button type="submit">OK</button>
             </form>
+        </div> -->
+
+        <div id="mainpage" class="passwordProtected">
+            <div>
+                <h1>200</h1>
+                <h2>days</h2>
+                <h3>till the best ever PickHacks!</h3>
+            </div>
         </div>
-
-        <h1 class="passwordProtected"><span>&#129309;</span> Newsletters</h1>
-
-        <hr class="passwordProtected" />
-
-        <ul class="passwordProtected">
-            <li>
-                <h3><span>&#127810;</span> <a href="september_sponsor_newsletter.pdf" target="_blank">September Newsletter</a></h3>
-            </li>
-            <li>
-                <h3><span>❄️</span> <a href="december_sponsor_newsletter.pdf" target="_blank">December Newsletter</a></h3>
-            </li>
-            <li>
-                <h3><span>💖</span> <a href="February_newsletter.pdf" target="_blank">Febrary Newsletter</a></h3>
-            </li>
-        </ul>
-
-        <h1 class="passwordProtected"><span>&#9989;</span> To-Do Google Forms</h1>
-
-        <hr class="passwordProtected" />
-
-        <ul class="passwordProtected">
-            <li>
-                <h3><span>🥉</span> <a href="https://forms.gle/wK55ABc4GZDi3uRf8" target="_blank">Bronze Sponsor</a></h3>
-            </li>
-            <li>
-                <h3><span>🥈</span> <a href="https://forms.gle/yU7YazBkSwDV5yuu5" target="_blank">Silver Sponsor</a></h3>
-            </li>
-            <li>
-                <h3><span>🥇</span> <a href="https://forms.gle/uPHt7pdBUTAgXwZ56" target="_blank">Gold Sponsor</a></h3>
-            </li>
-            <li>
-                <h3><span>💎</span> <a href="https://forms.gle/ySg6yXpuzPfpBGJu7" target="_blank">Diamond Sponsor</a></h3>
-            </li>
-        </ul>
+        <div id="todopage" class="passwordProtected">
+            <div>
+                <h1 class="section-title">ToDo</h1>
+                <h3>Please fill out the Google Form that matches your sponsorship!</h3>
+                <h4><span>Note</span>: to edit your response, click the link in the confirmation email</h4>
+                <div class="buttons">
+                    <a class="sponsor-button">
+                        🥉Bronze
+                    </a>
+                    <a class="sponsor-button">
+                        🥈Silver
+                    </a>
+                    <a class="sponsor-button">
+                        🥇Gold
+                    </a>
+                    <a class="sponsor-button">
+                        💎Diamond
+                    </a>
+                    <a class="sponsor-button">
+                        🌟Custom
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="faqpage" class="passwordProtected">
+            <div>
+                <h1 class="section-title">FAQ</h1>
+                <div class="faqs accordian" id="faqs-accordian">
+                    <div data-toggle="collapse" data-target="#answer1" aria-expanded="false" aria-controls="answer1">
+                        <div>
+                            <span class="question">What does mentorship entail?</span><i class="fas fa-rotate-270 fa-play"></i>
+                        </div>
+                        <div class="collapse" id="answer1" aria-labelledby="answer1">
+                            <div class="body">
+                                We would like all our sponsors to arrive 1-2 hours before general check-in. Our expectation is to have all sponsors ready to greet hackers at 4pm.
+                            </div>                        
+                        </div>
+                    </div>
+                    <div data-toggle="collapse" data-target="#answer2" aria-expanded="false" aria-controls="answer2">
+                        <div>
+                            <span class="question">What does judging entail?</span><i class="fas fa-rotate-270 fa-play"></i>
+                        </div>
+                        <div class="collapse" id="answer2" aria-labelledby="answer2">
+                            <div class="body">
+                                We would like all our sponsors to arrive 1-2 hours before general check-in. Our expectation is to have all sponsors ready to greet hackers at 4pm.
+                            </div>
+                        </div>
+                    </div>
+                    <div data-toggle="collapse" data-target="#answer3" aria-expanded="false" aria-controls="answer3">
+                        <div>
+                            <span class="question">How early do I need to be at the venue?</span><i class="fas fa-rotate-270 fa-play"></i>
+                        </div>
+                        <div class="collapse" id="answer3" aria-labelledby="answer3">
+                            <div class="body">
+                                We would like all our sponsors to arrive 1-2 hours before general check-in. Our expectation is to have all sponsors ready to greet hackers at 4pm.
+                            </div>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="newsletterspage" class="passwordProtected">
+            <div>
+                <h1 class="section-title">Newsletters</h1>
+                <h2>In an effort to provide transparency to our sponsors, we will publish a newsletter of our progress every couple of months</h2>
+                <div class="buttons">
+                    <a class="newsletter-button" href="February_newsletter.pdf" target="_blank">
+                        💖February 2020
+                    </a>
+                    <a class="newsletter-button" href="december_sponsor_newsletter.pdf" target="_blank">
+                        ❄️December 2019
+                    </a>
+                    <a class="newsletter-button" href="september_sponsor_newsletter.pdf" target="_blank">
+                        🍂September 2019
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="resumespage" class="passwordProtected">
+            <div>
+                <h1 class="section-title">Resumes</h1>
+                <h2>All PH 2020 sponsors will have access to our attendee resume database until June.</h2>
+                <a class="button" href="https://resume.pickhacks.io">
+                    Resume Database
+                </a>
+                <p>
+                    username: sponsor<br>password: ph_attendees_are_the_best
+                </p>
+            </div>
+        </div>
+        <div id="sponsorspage" class="passwordProtected">
+            <div>
+                <h1 class="section-title">Sponsors</h1>
+                <h2>A huge thank you to ALL of our past and current sponsors.</h2>
+            </div>
+        </div>
 
         <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
         <script>
@@ -358,6 +468,49 @@
                     return false;
                 }
             }
+        </script>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <script>
+            $(".page-switch").click(function(e) {
+                e.preventDefault();
+
+                $("body > div").css("opacity", 0).css("z-index", -1);
+                $($(this).attr('href')).css("opacity", 1).css("z-index", 1);
+                
+                $(".page-switch").removeClass("active");
+                $(this).addClass("active");
+            });
+
+            $(".faqs > div").click(function(e) {
+                e.preventDefault();
+
+                $(this).children("div").children("i").toggleClass("fa-rotate-90").toggleClass("fa-rotate-270");
+            })
+        </script>
+
+        <script>
+            // Set the date we're counting down to
+            var countDownDate = new Date("Oct 2, 2020 12:00:00").getTime();
+            
+            // Update the count down every 1 second
+            var x = setInterval(function() {
+            
+                // Get today's date and time
+                var now = new Date().getTime();
+                
+                // Find the distance between now and the count down date
+                var distance = countDownDate - now;
+                
+                // Time calculations for days, hours, minutes and seconds
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                
+                // Display the result in the element with id="demo"
+                $("#mainpage div h1")[0].innerHTML = days;
+            
+            }, 1000);
         </script>
     </body>
 </html>

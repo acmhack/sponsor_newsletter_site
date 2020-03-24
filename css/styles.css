@@ -1,0 +1,353 @@
+@font-face {
+  font-family: 'Gotham-Medium';
+  src: url('../font/Gotham-Medium/Gotham-Medium.eot?#iefix') format('embedded-opentype'),  url('../font/Gotham-Medium/Gotham-Medium.otf')  format('opentype'),
+	     url('../font/Gotham-Medium/Gotham-Medium.woff') format('woff'), url('../font/Gotham-Medium/Gotham-Medium.ttf')  format('truetype'), url('../font/Gotham-Medium/Gotham-Medium.svg#Gotham-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background: #171717;
+  color: white;
+  position: relative;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+body > div {
+  margin: auto;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+body > div > div {
+  margin: auto;
+}
+
+#todopage, #faqpage, #newsletterspage, #resumespage, #sponsorspage {
+  opacity: 0;
+}
+
+#mainpage h1 {
+  margin: 0;
+  font-family: titling-gothic-fb-wide, sans-serif;
+  font-size: 128px;
+  line-height: 110px;
+}
+
+#mainpage h2 {
+  margin: 0;
+  font-family: titling-gothic-fb-wide, sans-serif;
+  font-size: 50px;
+}
+
+#mainpage h3 {
+  font-family: 'Gotham-Medium', sans-serif;
+  font-size: 24px;
+}
+
+#todopage > div {
+  text-align: center;
+  width: 415px;
+  display: flex;
+  flex-direction: column;
+}
+
+#todopage h3 {
+  font-family: 'Gotham-Medium', sans-serif;
+  font-size: 24px;
+}
+
+#todopage h4 {
+  font-family: 'Gotham-Medium', sans-serif;
+  font-size: 18px;
+  width: 300px;
+  margin: auto;
+}
+
+#todopage h4 span {
+  color: #E43883;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+#todopage .buttons {
+  width: 200px;
+  margin-top: 2rem;
+}
+
+#newsletterspage .buttons {
+  width: 300px;
+  margin-top: 1rem;
+}
+
+.sponsor-button,
+.newsletter-button {
+  background: #201F1F;
+  border-radius: 5px;
+  width: 100%;
+  padding: 0.5rem 0;
+  font-size: 24px;
+  font-family: 'Gotham-Medium', sans-serif;
+  margin: 0.5rem 0;
+  border: solid 2px transparent;
+  transition: all 0.1s linear;
+  text-align: center;
+}
+
+.sponsor-button:hover,
+.newsletter-button:hover {
+  text-decoration: none;
+  color: white;
+  border: solid 2px white;
+  cursor: pointer;
+}
+
+#faqpage .question {
+  font-size: 18px;
+  font-family: 'Gotham-Medium', sans-serif;
+}
+
+.faqs {
+  margin-top: 2rem;
+}
+
+.faqs > div {
+  background: #201F1F;
+  border-radius: 5px;
+  width: 500px;
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+}
+
+.faqs > div > div:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.collapse .body,
+div.collapsing .body {
+  padding-top: 1rem;
+  font-size: 14px;
+  font-family: 'Gotham-Medium', sans-serif;
+  min-height: 0;
+}
+
+.faqs div:hover {
+  cursor: pointer;
+}
+
+.faqs div i {
+  display: flex;
+  align-items: center;
+  transition: all 0.2s linear;
+}
+
+.faqs div:hover i {
+  color: #40ABD7;
+}
+
+#newsletterspage h2 {
+  font-size: 24px;
+  font-family: 'Gotham-Medium', sans-serif;
+}
+
+#newsletterspage > div {
+  width: 700px;
+  text-align: center;
+}
+
+#resumespage > div {
+  width: 700px;
+  text-align: center;
+}
+
+#resumespage h2 {
+  font-size: 24px;
+  font-family: 'Gotham-Medium', sans-serif;
+  margin-bottom: 3rem;
+}
+
+#resumespage p {
+  font-size: 14px;
+  font-family: 'Gotham-Medium', sans-serif;
+  margin-top: 1rem;
+}
+
+#resumespage .button {
+  background: #201F1F;
+  border-radius: 50px;
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-family: 'Gotham-Medium', sans-serif;
+  margin: 0.5rem 0;
+  border: solid 2px transparent;
+  transition: all 0.1s linear;
+  text-align: center;
+}
+
+#resumespage .button:hover {
+  text-decoration: none;
+  color: white;
+  border: solid 2px white;
+  cursor: pointer;
+}
+
+#sponsorspage h2 {
+  font-size: 24px;
+  font-family: 'Gotham-Medium', sans-serif;
+  margin-bottom: 6rem;
+}
+
+nav.navbar {
+  width: 100%;
+  z-index: 2;
+}
+
+nav.navbar .container-fluid {
+  padding: 0.5rem 0;
+}
+
+.nav-item {
+  display: flex;
+  font-family: titling-gothic-fb, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.15rem;
+}
+
+.nav-link {
+  margin: auto 0;
+  color: white !important;
+}
+
+.main-nav .nav-link {
+  margin: auto 0.25rem;
+}
+
+.navbar-brand {
+  order: -1;
+}
+
+.mlh {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 1rem;
+}
+
+.navbar-nav {
+  margin-right: 100px;
+}
+
+.navbar-nav a {
+  position: relative;
+}
+
+.navbar-nav li a:hover::after,
+.navbar-nav li a.active::after {
+  content: ""; 
+  float: left; 
+  background: white; 
+  width: calc(100% - 1rem); 
+  height: 3px; 
+  border-radius: 3px;
+  position: absolute;
+  left: 0.5rem;
+  bottom: 0.25rem;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-family: titling-gothic-fb-wide, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-weight: bolder;
+}
+
+h1 span {
+ font-size: 1.85rem;
+}
+
+hr {
+  border: 1px solid rgba(85, 85, 85, 0.2);
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li:not(.nav-item):first-child {
+  padding: 0.25rem 0 0.125rem 0;
+}
+
+ul li:not(.nav-item) {
+  padding: 0.125rem 0 0.25rem 0;
+  transition: all 0.2s linear;
+}
+
+ul li:not(.nav-item):hover {
+  background-color: rgba(85, 85, 85, 0.1);
+}
+
+ul li h3 {
+  font-size: 1.4rem;
+}
+
+a {
+  color: inherit;
+}
+
+.passwordProtected {
+  /* display: none; */
+}
+
+.passwordBox {
+  margin: auto;
+  width: 50%;
+  max-width: 453.6px;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 8px;
+  text-align: center;
+  padding: 2rem 1rem;
+  color: white;
+}
+
+.passwordBox h2 {
+  margin: 0 0 1.25rem 0;
+}
+
+.passwordBox button {
+  display: block;
+  margin: auto;
+  background-color: #55a968;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  padding: 0.75rem 1.25rem;
+  font-family: inherit;
+}
+
+.passwordBox input {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border-style: none;
+  margin-bottom: 1rem;
+  width: 70%;
+}
