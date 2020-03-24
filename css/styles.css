@@ -52,7 +52,7 @@ body > div > div {
 
 #todopage > div {
   text-align: center;
-  width: 415px;
+  max-width: 415px;
   display: flex;
   flex-direction: column;
 }
@@ -65,7 +65,7 @@ body > div > div {
 #todopage h4 {
   font-family: 'Gotham-Medium', sans-serif;
   font-size: 18px;
-  width: 300px;
+  max-width: 300px;
   margin: auto;
 }
 
@@ -80,12 +80,12 @@ body > div > div {
 }
 
 #todopage .buttons {
-  width: 200px;
+  max-width: 200px;
   margin-top: 2rem;
 }
 
 #newsletterspage .buttons {
-  width: 300px;
+  max-width: 300px;
   margin-top: 1rem;
 }
 
@@ -123,7 +123,7 @@ body > div > div {
 .faqs > div {
   background: #201F1F;
   border-radius: 5px;
-  width: 500px;
+  max-width: 500px;
   padding: 1rem 1.25rem;
   margin: 1rem 0;
 }
@@ -161,12 +161,12 @@ div.collapsing .body {
 }
 
 #newsletterspage > div {
-  width: 700px;
+  max-width: 700px;
   text-align: center;
 }
 
 #resumespage > div {
-  width: 700px;
+  max-width: 700px;
   text-align: center;
 }
 
