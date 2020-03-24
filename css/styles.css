@@ -213,6 +213,21 @@ nav.navbar {
   z-index: 2;
 }
 
+@media (max-width: 991px) {
+  .navbar-brand {
+      display: none;
+  }
+
+  nav .navbar-nav {
+    display: flex;
+    margin-right: 0;
+  }
+
+  nav .navbar-nav li {
+    margin: auto;
+  }
+}
+
 nav.navbar .container-fluid {
   padding: 0.5rem 0;
 }
