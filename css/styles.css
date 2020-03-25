@@ -114,7 +114,7 @@ body > div > div > *:last-child {
   font-family: 'Gotham-Medium', sans-serif;
   font-size: 18px;
   width: 300px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 @media (max-width: 485px) {
