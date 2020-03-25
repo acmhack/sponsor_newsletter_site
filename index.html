@@ -61,7 +61,7 @@
 
         <div id="mainpage" class="passwordProtected">
             <div>
-                <h1>200</h1>
+                <h1></h1>
                 <h2>days</h2>
                 <h3>till the best ever PickHacks!</h3>
             </div>
@@ -69,22 +69,22 @@
         <div id="todopage" class="passwordProtected">
             <div>
                 <h1 class="section-title">ToDo</h1>
-                <h3>Please fill out the Google Form that matches your sponsorship!</h3>
+                <h2 class="subtitle">Please fill out the Google Form that matches your sponsorship!</h3>
                 <h4><span>Note</span>: to edit your response, click the link in the confirmation email</h4>
                 <div class="buttons">
-                    <a class="sponsor-button">
+                    <a class="sponsor-button" href="https://docs.google.com/forms/d/e/1FAIpQLScs886GWAioWH6WHxW8pccHQ69aLWYyS1J_YkuACwuFyN82CA/viewform?usp=sf_link">
                         🥉Bronze
                     </a>
-                    <a class="sponsor-button">
+                    <a class="sponsor-button" href="https://docs.google.com/forms/d/e/1FAIpQLScDbtmnKLripe5Oo5NlHAwRbleT8ndLlNwWqcTOSPAqsmYXPw/viewform?usp=sf_link">
                         🥈Silver
                     </a>
-                    <a class="sponsor-button">
+                    <a class="sponsor-button" href="https://docs.google.com/forms/d/e/1FAIpQLSdjMp4-fUlz4DV0rblsTlahoeNx7zDWIvQiRTS5u0fhQxdzRA/viewform?usp=sf_link">
                         🥇Gold
                     </a>
-                    <a class="sponsor-button">
+                    <a class="sponsor-button" href="https://docs.google.com/forms/d/e/1FAIpQLScqTAYGJkWp65X5AsK4lMFd_3AYxiVX66zpQktHl-vNDbQwng/viewform?usp=sf_link">
                         💎Diamond
                     </a>
-                    <a class="sponsor-button">
+                    <a class="sponsor-button" href="https://docs.google.com/forms/d/e/1FAIpQLSd8s8l4CDjLKQfEHVt5VP7JA4FKsB258LdGuRGsx2c6VAqX0g/viewform?usp=sf_link">
                         🌟Custom
                     </a>
                 </div>
@@ -130,7 +130,7 @@
         <div id="newsletterspage" class="passwordProtected">
             <div>
                 <h1 class="section-title">Newsletters</h1>
-                <h2>In an effort to provide transparency to our sponsors, we will publish a newsletter of our progress every couple of months</h2>
+                <h2 class="subtitle">In an effort to provide transparency to our sponsors, we will publish a newsletter of our progress every couple of months</h2>
                 <div class="buttons">
                     <a class="newsletter-button" href="February_newsletter.pdf" target="_blank">
                         💖February 2020
@@ -147,7 +147,7 @@
         <div id="resumespage" class="passwordProtected">
             <div>
                 <h1 class="section-title">Resumes</h1>
-                <h2>All PH 2020 sponsors will have access to our attendee resume database until June.</h2>
+                <h2 class="subtitle">All PH 2020 sponsors will have access to our attendee resume database until June.</h2>
                 <a class="button" href="https://resume.pickhacks.io">
                     Resume Database
                 </a>
@@ -159,7 +159,7 @@
         <div id="sponsorspage" class="passwordProtected">
             <div>
                 <h1 class="section-title">Sponsors</h1>
-                <h2>A huge thank you to ALL of our past and current sponsors.</h2>
+                <h2 class="subtitle">A huge thank you to ALL of our past and current sponsors.</h2>
             </div>
         </div>
 
@@ -479,8 +479,8 @@
             $(".page-switch").click(function(e) {
                 e.preventDefault();
 
-                $("body > div").css("opacity", 0).css("z-index", -1);
-                $($(this).attr('href')).css("opacity", 1).css("z-index", 1);
+                $("body > div").css("opacity", 0).css("z-index", -1).css("display", "none");
+                $($(this).attr('href')).css("opacity", 1).css("z-index", 1).css("display", "flex");
                 
                 $(".page-switch").removeClass("active");
                 $(this).addClass("active");

@@ -12,7 +12,7 @@ body {
   position: relative;
   display: flex;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   overflow-x: hidden;
 }
 
@@ -22,10 +22,43 @@ body > div {
   height: 100%;
   width: 100%;
   display: flex;
+  padding: 0 15px;
+}
+
+body > div#mainpage > div {
+  margin: auto;
 }
 
 body > div > div {
-  margin: auto;
+  margin: 150px auto 0 auto;
+}
+
+body > div > div > *:last-child {
+  margin-bottom: 2rem;
+}
+
+.subtitle {
+  font-size: 24px;
+  font-family: 'Gotham-Medium', sans-serif;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-family: titling-gothic-fb-wide, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 485px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
 }
 
 #todopage, #faqpage, #newsletterspage, #resumespage, #sponsorspage {
@@ -50,23 +83,45 @@ body > div > div {
   font-size: 24px;
 }
 
-#todopage > div {
-  text-align: center;
-  max-width: 415px;
-  display: flex;
-  flex-direction: column;
+@media (max-width: 375px) {
+  #mainpage h1 {
+    margin: 0;
+    font-family: titling-gothic-fb-wide, sans-serif;
+    font-size: 100px;
+    line-height: 90px;
+  }
+  
+  #mainpage h2 {
+    margin: 0;
+    font-family: titling-gothic-fb-wide, sans-serif;
+    font-size: 40px;
+  }
+  
+  #mainpage h3 {
+    font-family: 'Gotham-Medium', sans-serif;
+    font-size: 18px;
+  }
 }
 
-#todopage h3 {
-  font-family: 'Gotham-Medium', sans-serif;
-  font-size: 24px;
+#todopage > div {
+  text-align: center;
+  width: 415px;
+  display: flex;
+  flex-direction: column;
 }
 
 #todopage h4 {
   font-family: 'Gotham-Medium', sans-serif;
   font-size: 18px;
-  max-width: 300px;
+  width: 300px;
   margin: auto;
+}
+
+@media (max-width: 485px) {
+  #todopage h4 {
+    font-size: 16px;
+    width: 100%;
+  }
 }
 
 #todopage h4 span {
@@ -80,13 +135,20 @@ body > div > div {
 }
 
 #todopage .buttons {
-  max-width: 200px;
+  width: 225px;
   margin-top: 2rem;
 }
 
 #newsletterspage .buttons {
-  max-width: 300px;
+  width: 300px;
   margin-top: 1rem;
+}
+
+@media (max-width: 330px) {
+  #newsletterspage .buttons,
+  #newsletterpage {
+    width: 100%;
+  }
 }
 
 .sponsor-button,
@@ -123,9 +185,16 @@ body > div > div {
 .faqs > div {
   background: #201F1F;
   border-radius: 5px;
-  max-width: 500px;
+  width: 500px;
   padding: 1rem 1.25rem;
   margin: 1rem 0;
+}
+
+@media (max-width: 530px) {
+  .faqs > div,
+  #faqpage > div {
+    width: 100%;
+  }
 }
 
 .faqs > div > div:first-child {
@@ -155,24 +224,36 @@ div.collapsing .body {
   color: #40ABD7;
 }
 
-#newsletterspage h2 {
-  font-size: 24px;
-  font-family: 'Gotham-Medium', sans-serif;
+@media (max-width: 485px) {
+  #faqpage .question {
+    margin-right: 1rem;
+  }
+
+  #faqpage .question,
+  #faqs div i {
+    font-size: 14px;
+  }
+
+  div.collapse .body,
+  div.collapsing .body {
+    font-size: 12px;
+  }
 }
 
-#newsletterspage > div {
-  max-width: 700px;
-  text-align: center;
-}
-
+#newsletterspage > div,
 #resumespage > div {
-  max-width: 700px;
+  width: 700px;
   text-align: center;
+}
+
+@media (max-width: 700px) {
+  #newsletterspage > div,
+  #resumespage > div {
+    width: 100%;
+  }
 }
 
 #resumespage h2 {
-  font-size: 24px;
-  font-family: 'Gotham-Medium', sans-serif;
   margin-bottom: 3rem;
 }
 
@@ -195,6 +276,14 @@ div.collapsing .body {
   text-align: center;
 }
 
+@media (max-width: 485px) {
+  .sponsor-button,
+  .newsletter-button,
+  #resumespage .button {
+    font-size: 20px;
+  }
+}
+
 #resumespage .button:hover {
   text-decoration: none;
   color: white;
@@ -203,8 +292,6 @@ div.collapsing .body {
 }
 
 #sponsorspage h2 {
-  font-size: 24px;
-  font-family: 'Gotham-Medium', sans-serif;
   margin-bottom: 6rem;
 }
 
@@ -221,6 +308,8 @@ nav.navbar {
   nav .navbar-nav {
     display: flex;
     margin-right: 0;
+    background-color: #171717;
+    padding-bottom: 0.75rem;
   }
 
   nav .navbar-nav li {
@@ -279,14 +368,6 @@ nav.navbar .container-fluid {
   position: absolute;
   left: 0.5rem;
   bottom: 0.25rem;
-}
-
-.section-title {
-  font-size: 3rem;
-  font-family: titling-gothic-fb-wide, sans-serif;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 1rem;
 }
 
 h1 {
