@@ -33,31 +33,24 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav main-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link page-switch" data-toggle="collapse" data-target="#navbarNav" href="#todopage">ToDo</a>
+                            <a class="nav-link page-switch" data-toggle="collapse" data-target="#navbarNav.show" href="#todopage">ToDo</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link page-switch" data-toggle="collapse" data-target="#navbarNav" href="#faqpage">FAQ</a>
+                            <a class="nav-link page-switch" data-toggle="collapse" data-target="#navbarNav.show" href="#faqpage">FAQ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link page-switch" data-toggle="collapse" data-target="#navbarNav" href="#newsletterspage">Newsletters</a>
+                            <a class="nav-link page-switch" data-toggle="collapse" data-target="#navbarNav.show" href="#newsletterspage">Newsletters</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link page-switch" data-toggle="collapse" data-target="#navbarNav" href="#resumespage">Resumes</a>
+                            <a class="nav-link page-switch" data-toggle="collapse" data-target="#navbarNav.show" href="#resumespage">Resumes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link page-switch" data-toggle="collapse" data-target="#navbarNav" href="#sponsorspage">Sponsors</a>
+                            <a class="nav-link page-switch" data-toggle="collapse" data-target="#navbarNav.show" href="#sponsorspage">Sponsors</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <!-- <div class="passwordBox">
-            <h2>Enter Password for Login:</h2>
-            <form>
-                <input type="password" name="password" />
-                <button type="submit">OK</button>
-            </form>
-        </div> -->
 
         <div id="mainpage" class="passwordProtected">
             <div>
@@ -165,17 +158,13 @@
 
         <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
         <script>
-            $("form").on('submit', function (e) {
-                if( SHA512($("input").val()) === "1d37c58b590d1f560393ce80a834d58f938a2e327238678dd8a67dda4632241a59385c4a7a4fcadc14507477ad88b9f4bc43a13e7e86dca77950d7c88e8565c0" )
-                {
-                    $(".passwordProtected").css("display","block");
-                    $(".passwordBox").css("display","none");
-                }
+            var passwordCorrect = false;
 
-                //stop form submission
-                e.preventDefault();
-                return false;
-            });
+            while(!passwordCorrect) {
+                var hashedPassword = SHA512(prompt("Please enter the password"));
+
+                passwordCorrect = (hashedPassword === "1d37c58b590d1f560393ce80a834d58f938a2e327238678dd8a67dda4632241a59385c4a7a4fcadc14507477ad88b9f4bc43a13e7e86dca77950d7c88e8565c0");
+            }
 
             /*
             * Secure Hash Algorithm (SHA512)
