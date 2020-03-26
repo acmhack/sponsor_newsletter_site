@@ -314,6 +314,7 @@ div.collapsing .body {
 nav.navbar {
   width: 100%;
   z-index: 2;
+  background-color: #171717;
 }
 
 @media (max-width: 991px) {
@@ -324,7 +325,6 @@ nav.navbar {
   nav .navbar-nav {
     display: flex;
     margin-right: 0;
-    background-color: #171717;
     padding-bottom: 0.75rem;
   }
 
