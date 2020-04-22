@@ -289,14 +289,9 @@ div.collapsing .body {
   max-width: 975px;
 }
 
-.sponsor-logos a {
+.sponsor-logos img {
   margin: 0 auto 1rem auto;
-  display: flex;
-  width: 220px;
-}
-
-.sponsor-logos a img {
-  margin: auto;
+  padding: 0 10px;
 }
 
 nav.navbar {
